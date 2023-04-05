@@ -65,6 +65,7 @@ h3 {
   position: relative;
 }
 
+/* Boxen (div.page-header-container & header.page-header::after Pseudo-Element per Clip-Path und Polygon unten abschneiden) */
 .page-header-container,
 .page-header::after {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0 80%);
@@ -115,6 +116,7 @@ h3 {
   border-radius: 2px;
 }
 
+/* Label wie Placeholder aussehen lassen */
 .label-description {
   color: var(--clr-text-placeholder);
   position: absolute;
@@ -126,6 +128,7 @@ h3 {
   cursor: text;
 }
 
+/* Label bewegt sich bei Fokus und bei Input an den oberen Rand der Suchleiste */
 .search:focus + label > .label-description,
 .search:not(:placeholder-shown) + label > .label-description {
   font-size: 0.5rem;
@@ -133,6 +136,7 @@ h3 {
   top: 0.4rem;
 }
 
+/* Such-Icon in Suchleiste platzieren */
 .icon-search {
   width: 1rem;
   position: absolute;
@@ -142,6 +146,7 @@ h3 {
   transform: translateY(-50%);
 }
 
+/* Dropdowns nebeneinander darstellen */
 .filter-wrapper {
   display: flex;
   gap: 1rem;
@@ -162,11 +167,13 @@ h3 {
   border: 2px solid var(--clr-accent);
   border-radius: 2px;
 
+  /* Default Dropdown Icon entfernen */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
+/* Custom Dropdown Icon */
 .icon-down {
   background-color: var(--clr-secondary);
 
@@ -234,6 +241,7 @@ h3 {
   color: var(--clr-accent);
 }
 
+/* Bei Suchleiste das "X" (unter Chrome bei Eingabe sichtbar) entfernen */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
